@@ -2,7 +2,10 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Luyện Thi Trắc Nghiệm Công Nghe Số & AI</title>
+    <title>Luyện Thi Trắc Nghiệm Công Nghệ Số & AI - VNU1001</title>
+    <meta name="description" content="Phần mềm luyện thi trắc nghiệm trực tuyến môn Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo (VNU1001) trường Đại học Quốc gia Hà Nội.">
+    <meta name="keywords" content="vnu1001, nhap mon cong nghe so, trac nghiem cong nghe so vnu, de thi vnu1001, dhqghn">
+    <meta name="robots" content="index, follow">
     <style>
         body { font-family: Arial, sans-serif; max-width: 850px; margin: 30px auto; padding: 20px; line-height: 1.6; background-color: #f0f2f5; color: #333; }
         .quiz-container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -30,10 +33,10 @@
 <body>
 
 <div class="quiz-container">
-    <h1>Luyện Tập Nhập Môn Công Nghệ Số & AI</h1>
+    <h1>Luyện Tập Nhập Môn Công Nghệ Số & AI (VNU1001)</h1>
     <div id="quiz-box">
         <div class="progress">
-            <span id="progress-text">Câu hỏi 1/50</span>
+            <span id="progress-text">Câu hỏi 1/40</span>
             <span id="score-text" style="color: #28a745;">Đúng: 0</span>
         </div>
         <div class="question" id="question-text">Đang tải câu hỏi...</div>
@@ -46,264 +49,226 @@
     </div>
     <div id="result-box" class="score-board" style="display:none;">
         <h2>🎉 Chúc Mừng Bạn Đã Hoàn Thành!</h2>
-        <p>Kết quả của bạn: <span id="final-score" style="color: #d9534f; font-size: 1.2em;">0</span> / <span id="total-questions">50</span> câu đúng</p>
+        <p>Kết quả của bạn: <span id="final-score" style="color: #d9534f; font-size: 1.2em;">0</span> / <span id="total-questions">40</span> câu đúng</p>
         <button class="restart-btn" onclick="restartQuiz()">🔄 Làm Lại Bộ Đề Này</button>
     </div>
 </div>
 
 <script>
 const quizData = [
+    // --- MODULE 1: MÁY TÍNH VÀ CÁC THIẾT BỊ NGOẠI VI ---
     {
       "cau_hoi": "Thuật ngữ nào sau đây dùng để chỉ các sự kiện, số liệu, ký hiệu thô, chưa được xử lý và chưa mang nhiều ý nghĩa trong một bối cảnh cụ thể?",
-      "lua_chon": ["Dữ liệu (Data)", "Thông tin (Information)", "Tri thức (Knowledge)", "Trí tuệ (Wisdom)"],
+      "lua_chon": ["Thông tin (Information)", "Tri thức (Knowledge)", "Dữ liệu (Data)", "Trí tuệ (Intelligence)"],
       "dap_an_dung": "Dữ liệu (Data)"
     },
     {
       "cau_hoi": "Trong kiến trúc máy tính hiện đại hỗ trợ AI, thành phần phần cứng nào được tối ưu hóa chuyên biệt để tăng tốc các tác vụ trí tuệ nhân tạo và học máy ngay trên thiết bị?",
-      "lua_chon": ["CPU (Central Processing Unit)", "GPU (Graphics Processing Unit)", "NPU (Neural Processing Unit)", "RAM (Random Access Memory)"],
+      "lua_chon": ["RAM (Random Access Memory)", "NPU (Neural Processing Unit)", "PSU (Power Supply Unit)", "HDD (Hard Disk Drive)"],
       "dap_an_dung": "NPU (Neural Processing Unit)"
     },
     {
-      "cau_hoi": "Khi máy tính của bạn chạy nhiều ứng dụng nặng cùng lúc khiến máy chạy chậm do thiếu bộ nhớ truy cập ngẫu nhiên, hệ điều hành sẽ kích hoạt cơ chế nào để ngăn ứng dụng bị treo hoàn toàn?",
-      "lua_chon": ["Bộ nhớ ảo (Virtual Memory)", "Bộ nhớ đệm (Cache)", "Nén dữ liệu ổ cứng", "Tăng xung nhịp CPU"],
-      "dap_an_dung": "Bộ nhớ ảo (Virtual Memory)"
+      "cau_hoi": "Khi máy tính của bạn chạy nhiều ứng dụng nặng cùng lúc khiến máy chạy chậm do thiếu bộ nhớ truy cập ngẫu nhiên, cơ chế nào của Hệ điều hành sẽ kích hoạt để ngăn ứng dụng bị treo hoàn toàn?",
+      "lua_chon": ["Tạm thời chuyển phần mềm dữ liệu ít dùng từ RAM sang ổ cứng", "Giảm tốc độ xung nhịp của CPU để tiết kiệm năng lượng", "Ngắt kết nối mạng internet để ưu tiên xử lý cục bộ", "Tự động xóa các tệp tin tạm thời để giải phóng dung lượng ổ đĩa"],
+      "dap_an_dung": "Tạm thời chuyển phần mềm dữ liệu ít dùng từ RAM sang ổ cứng"
     },
     {
       "cau_hoi": "Một sinh viên cần truyền dữ liệu dung lượng gần 400 MB từ laptop sang máy chiếu không dây trong phòng học ngay lập tức với khoảng cách 15 mét. Thiết bị duy nhất đáp ứng đủ tầm hoạt động và băng thông tốc độ cao cho tác vụ này là gì?",
-      "lua_chon": ["Bluetooth", "Wi-Fi", "Hồng ngoại (Infrared)", "NFC"],
+      "lua_chon": ["NFC", "Bluetooth", "Wi-Fi", "Ethernet"],
       "dap_an_dung": "Wi-Fi"
     },
     {
       "cau_hoi": "Thiết bị nào sau đây là lựa chọn tối ưu nhất cho một sinh viên thiết kế đồ họa cần mang máy đi học hàng ngày nhưng vẫn đảm bảo khả năng xử lý các phần mềm nặng?",
-      "lua_chon": ["Máy tính để bàn (PC)", "Máy tính bảng (Tablet)", "Máy tính xách tay (Laptop)", "Điện thoại thông minh (Smartphone)"],
+      "lua_chon": ["Máy tính để bàn (Desktop)", "Điện thoại thông minh (Smartphone)", "Máy tính xách tay (Laptop)", "Máy tính bảng (Tablet)"],
       "dap_an_dung": "Máy tính xách tay (Laptop)"
     },
     {
       "cau_hoi": "Để soạn thảo một bài tiểu luận học thuật yêu cầu định dạng chuẩn mực, tạo mục lục tự động và quản lý trích dẫn tài liệu tham khảo phức tạp, phần mềm nào là lựa chọn phù hợp nhất?",
-      "lua_chon": ["Notepad", "Microsoft Word", "Google Sheets", "Microsoft PowerPoint"],
+      "lua_chon": ["Google Sheets", "Notepad", "Microsoft Word", "Google Docs"],
       "dap_an_dung": "Microsoft Word"
     },
+
+    // --- MODULE 2: KHAI THÁC DỮ LIỆU VÀ THÔNG TIN ---
     {
-      "cau_hoi": "Phát biểu nào sau đây mô tả chính xác mối quan hệ giữa Dữ liệu và Thông tin theo mô hình DIKW (Data - Information - Knowledge - Wisdom)?",
-      "lua_chon": ["Dữ liệu là thông tin đã được phân tích và thấu hiểu sâu sắc.", "Thông tin là dữ liệu thô chưa qua xử lý hay tổ chức.", "Thông tin là dữ liệu đã được xử lý, tổ chức và đặt trong ngữ cảnh cụ thể.", "Dữ liệu và thông tin là hai khái niệm hoàn toàn độc lập, không có quan hệ liên kết."],
-      "dap_an_dung": "Thông tin là dữ liệu đã được xử lý, tổ chức và đặt trong ngữ cảnh cụ thể."
+      "cau_hoi": "Phát biểu nào sau đây mô tả chính xác mối quan hệ giữa Dữ liệu và Thông tin theo mô hình DIKW?",
+      "lua_chon": ["Dữ liệu là thông tin đã mang ý nghĩa", "Thông tin là dữ liệu thô chưa qua xử lý và tổ chức", "Thông tin là dữ liệu đã được xử lý, tổ chức và đặt trong ngữ cảnh cụ thể", "Dữ liệu và Thông tin là hai thuật ngữ có ý nghĩa tương đồng"],
+      "dap_an_dung": "Thông tin là dữ liệu đã được xử lý, tổ chức và đặt trong ngữ cảnh cụ thể"
     },
     {
-      "cau_hoi": "Để tìm kiếm chính xác các tài liệu định dạng PDF về chủ đề \"biến đổi khí hậu\" chỉ trên các trang web của chính phủ (.gov), cú pháp tìm kiếm nào trên Google là chính xác nhất?",
-      "lua_chon": ["\"biến đổi khí hậu\" filetype:pdf site:gov", "file:pdf site:.gov \"biến đổi khí hậu\"", "biến đổi khí hậu pdf government", "site:gov + file:pdf + \"biến đổi khí hậu\""],
+      "cau_hoi": "Để tìm kiếm chính xác các tài liệu định dạng PDF về chủ đề 'biến đổi khí hậu' chỉ trên các trang web của chính phủ (.gov), cú pháp tìm kiếm nào trên Google là chính xác nhất?",
+      "lua_chon": ["biến đổi khí hậu pdf government", "file:pdf site:.gov \"biến đổi khí hậu\"", "\"biến đổi khí hậu\" filetype:pdf site:gov", "\"biến đổi khí hậu\" AND pdf AND gov"],
       "dap_an_dung": "\"biến đổi khí hậu\" filetype:pdf site:gov"
     },
     {
-      "cau_hoi": "Theo quy tắc sao lưu dữ liệu 3-2-1 được khuyến nghị, con số \"2\" đại diện cho yêu cầu nào?",
-      "lua_chon": ["Lưu trữ dữ liệu ở 2 địa điểm địa lý khác nhau xa nhau.", "Lưu trữ các bản sao trên ít nhất 2 loại phương tiện lưu trữ khác nhau.", "Duy trì tối thiểu 2 bản sao dự phòng của dữ liệu gốc.", "Cập nhật bản sao lưu định kỳ 2 lần mỗi tuần."],
-      "dap_an_dung": "Lưu trữ các bản sao trên ít nhất 2 loại phương tiện lưu trữ khác nhau."
+      "cau_hoi": "Theo quy tắc sao lưu dữ liệu 3-2-1 được khuyến nghị, con số '2' đại diện cho yêu cầu nào?",
+      "lua_chon": ["Lưu trữ ít nhất 2 bản sao dự phòng trên một thiết bị lưu trữ ở địa điểm khác", "Cập nhật quy trình sao lưu ít nhất 2 lần trong mỗi ngày", "Lưu trữ các bản sao trên tối thiểu 2 thiết bị có hỗ trợ mã hóa bảo mật", "Lưu trữ các bản sao trên ít nhất 2 loại phương tiện lưu trữ khác nhau"],
+      "dap_an_dung": "Lưu trữ các bản sao trên ít nhất 2 loại phương tiện lưu trữ khác nhau"
     },
     {
-      "cau_hoi": "Khi cần tìm kiếm các bài báo khoa học, luận văn và tài liệu học thuật đã được thẩm định để phục vụ nghiên cứu, công cụ tìm kiếm chuyên dụng nào sau đây của Google là phù hợp nhất?",
-      "lua_chon": ["Google Search thông thường", "Google News", "Google Scholar", "Google Books"],
+      "cau_hoi": "Khi cần tìm kiếm các bài báo khoa học, luận văn và tài liệu học thuật đã được thẩm định để phục vụ nghiên cứu, công cụ tìm kiếm chuyên dụng nào sau đây là phù hợp nhất?",
+      "lua_chon": ["Google Search thông thường", "Google Scholar", "Wikipedia", "Google News"],
       "dap_an_dung": "Google Scholar"
     },
     {
-      "cau_hoi": "Công cụ AI nào sau đây được thiết kế chuyên dụng cho việc tìm kiếm, tổng hợp và phân tích các bài báo khoa học, giúp rút ra kết luận nghiên cứu nhanh chóng?",
-      "lua_chon": ["Midjourney", "Elicit", "Stable Diffusion", "Canva AI"],
+      "cau_hoi": "Công cụ AI nào sau đây được giảng viên giới thiệu chuyên dụng cho việc tìm kiếm, tổng hợp và phân tích các bài báo khoa học, giúp rút ra kết luận nghiên cứu nhanh chóng?",
+      "lua_chon": ["ChatGPT", "Copilot", "Elicit", "Canva"],
       "dap_an_dung": "Elicit"
     },
     {
-      "cau_hoi": "Sinh viên cần kiểm tra độ tin cậy của một bài viết trên mạng xã hội có tiêu đề cường điệu và thiếu nguồn gốc. Theo bộ tiêu chí CRAAP, tiêu chí nào được ưu tiên kiểm tra để xác định uy tín của tác giả và mục đích cốt lõi nhất của nguồn tin này?",
-      "lua_chon": ["Tính Cập nhật (Currency): Xem bài viết đăng vào thời gian nào.", "Tính Thẩm quyền (Authority) và Mục đích (Purpose): Xác định uy tín tác giả/nguồn gốc và lý do bài viết tồn tại.", "Tính Liên quan (Relevance): Đánh giá bài viết có đúng chủ đề đang tìm không.", "Tính Chính xác (Accuracy): Đối chiếu lỗi chính tả của văn bản."],
-      "dap_an_dung": "Tính Thẩm quyền (Authority) và Mục đích (Purpose): Xác định uy tín tác giả/nguồn gốc và lý do bài viết tồn tại."
+      "cau_hoi": "Sinh viên cần kiểm tra độ tin cậy của một bài viết trên mạng xã hội có tiêu đề cường điệu và thiếu nguồn gốc tác giả. Theo bộ tiêu chí CRAAP, tiêu chí nào được ưu tiên kiểm tra cốt lõi nhất để xác định uy tín?",
+      "lua_chon": ["Tính cập nhật (Currency)", "Tính Thẩm quyền (Authority) và Mục đích (Purpose)", "Tính Chính xác (Accuracy) và Sự Liên quan (Relevance)", "Sự Liên quan (Relevance) và Tính Cập nhật (Currency)"],
+      "dap_an_dung": "Tính Thẩm quyền (Authority) và Mục đích (Purpose)"
     },
     {
-      "cau_hoi": "Khi nghiên cứu về một vấn đề y học, sinh viên tìm thấy một bài viết trên trang web có tên miền \".com\". Bài viết được trình bày chuyên nghiệp nhưng mục \"Tác giả\" chỉ ghi là \"Ban biên tập\" mà không nêu tên cụ thể hay trình độ chuyên môn. Áp dụng tiêu chí Authority (Thẩm quyền) trong mô hình CRAAP, sinh viên nên đánh giá độ tin cậy của nguồn này như thế nào?",
-      "lua_chon": ["Độ tin cậy tuyệt đối vì thuộc về một tổ chức có ban biên tập.", "Độ tin cậy thấp, vì không xác định được danh tính và năng lực chuyên môn của người chịu trách nhiệm nội dung.", "Độ tin cậy trung bình, cần kiểm tra xem trang web có quảng cáo hay không.", "Độ tin cậy cao nếu bài viết được chia sẻ nhiều trên mạng xã hội."],
-      "dap_an_dung": "Độ tin cậy thấp, vì không xác định được danh tính và năng lực chuyên môn của người chịu trách nhiệm nội dung."
+      "cau_hoi": "Khi nghiên cứu về một vấn đề y học, sinh viên tìm thấy một bài viết trên trang web có tên miền '.com'. Bài viết được trình bày chuyên nghiệp nhưng mục 'Tác giả' chỉ ghi là 'Ban biên tập' mà không nêu tên hay trình độ chuyên môn cụ thể. Áp dụng tiêu chí Authority trong mô hình CRAAP, sinh viên nên đánh giá độ tin cậy nguồn này như thế nào?",
+      "lua_chon": ["Đáng tin cậy, vì giao diện trang web chuyên nghiệp", "Đáng tin cậy, vì 'Ban biên tập' cho thấy có nhiều người cùng kiểm duyệt", "Độ tin cậy thấp, vì không xác định được danh tính và năng lực chuyên môn của người chịu trách nhiệm nội dung", "Rất đáng tin cậy nếu bài viết đứng đầu trang kết quả của Google"],
+      "dap_an_dung": "Độ tin cậy thấp, vì không xác định được danh tính và năng lực chuyên môn của người chịu trách nhiệm nội dung"
     },
+
+    // --- MODULE 3: TỔNG QUAN VỀ TRÍ TUỆ NHÂN TẠO ---
     {
-      "cau_hoi": "Sự kiện nào vào năm 1956 được coi là mốc khai sinh chính thức của lĩnh vực Trí tuệ nhân tạo (AI) như một ngành nghiên cứu khoa học độc lập?",
-      "lua_chon": ["Sự ra đời của máy tính ENIAC.", "Hội nghị Dartmouth.", "Alan Turing xuất bản bài báo về phép thử Turing.", "Máy tính Deep Blue đánh bại nhà vô địch cờ vua thế giới."],
-      "dap_an_dung": "Hội nghị Dartmouth."
+      "cau_hoi": "Sự kiện nào vào năm 1956 được coi là mốc khai sinh chính thức của lĩnh vực Trí tuệ nhân tạo (AI) như một ngành nghiên cứu khoa học?",
+      "lua_chon": ["Phép thử Turing (Turing Test)", "Chiến thắng của Deep Blue trước Garry Kasparov", "Hội nghị Dartmouth", "Phát minh ra kiến trúc Transformer"],
+      "dap_an_dung": "Hội nghị Dartmouth"
     },
     {
       "cau_hoi": "Đâu là điểm khác biệt cốt lõi về chức năng giữa AI phân biệt (Discriminative AI) và AI tạo sinh (Generative AI)?",
-      "lua_chon": ["AI phân biệt chuyên về mô hình ngôn ngữ lớn (LLM), còn AI tạo sinh sử dụng mạng nơ-ron tích chập (CNN).", "AI phân biệt tập trung vào phân loại/dự đoán nhãn, còn AI tạo sinh tập trung vào tạo ra nội dung mới.", "AI phân biệt chạy trên đám mây, còn AI tạo sinh bắt buộc chạy cục bộ trên thiết bị phần cứng.", "AI phân biệt không cần dữ liệu huấn luyện, còn AI tạo sinh cần lượng dữ liệu khổng lồ."],
-      "dap_an_dung": "AI phân biệt tập trung vào phân loại/dự đoán nhãn, còn AI tạo sinh tập trung vào tạo ra nội dung mới."
+      "lua_chon": ["AI phân biệt chuyên về mô hình ngôn ngữ lớn (LLM), còn AI tạo sinh sử dụng CNN", "AI phân biệt có khả năng tạo ra dữ liệu mới, còn AI tạo sinh chỉ phân loại", "AI phân biệt tập trung vào phân loại/dự đoán nhãn, còn AI tạo sinh tập trung vào tạo ra nội dung mới", "AI tạo sinh không yêu cầu dữ liệu huấn luyện, trong khi AI phân biệt thì có"],
+      "dap_an_dung": "AI phân biệt tập trung vào phân loại/dự đoán nhãn, còn AI tạo sinh tập trung vào tạo ra nội dung mới"
     },
     {
       "cau_hoi": "Nguyên lý hoạt động cốt lõi của các Mô hình ngôn ngữ lớn (LLMs) như GPT trong việc tạo văn bản là gì?",
-      "lua_chon": ["Truy xuất nguyên văn các câu trả lời từ một cơ sở dữ liệu đã lưu sẵn.", "Dự đoán từ/token tiếp theo có xác suất xuất hiện cao nhất dựa trên ngữ cảnh đầu vào.", "Dịch suy nghĩ của người dùng thành mã lập trình hệ thống.", "Quét toàn bộ Internet theo thời gian thực tại mỗi mili giây để sao chép kết quả."],
-      "dap_an_dung": "Dự đoán từ/token tiếp theo có xác suất xuất hiện cao nhất dựa trên ngữ cảnh đầu vào."
+      "lua_chon": ["Mô phỏng chính xác cấu trúc và khả năng cảm xúc của bộ não con người", "Dự đoán từ/token tiếp theo có xác suất xuất hiện cao nhất dựa trên ngữ cảnh đầu vào", "Sao chép và tổ chức lại các đoạn văn bản chính xác từ cơ sở dữ liệu", "Sử dụng một bộ quy tắc ngữ pháp cố định được lập trình tường minh"],
+      "dap_an_dung": "Dự đoán từ/token tiếp theo có xác suất xuất hiện cao nhất dựa trên ngữ cảnh đầu vào"
     },
     {
       "cau_hoi": "Đâu là lợi ích chính của việc sử dụng AI trong việc phát triển năng lực số cá nhân của sinh viên?",
-      "lua_chon": ["Làm thay hoàn toàn mọi bài tập lớn giúp sinh viên không cần tư duy học tập.", "Tăng cường hiệu suất tìm kiếm, tổng hợp tri thức và cá nhân hóa quá trình học tập.", "Thay thế hoàn toàn vai trò giảng dạy trực tiếp của giảng viên đại học.", "Tự động cấp chứng chỉ và bằng tốt nghiệp cho sinh viên mà không cần thi cử."],
-      "dap_an_dung": "Tăng cường hiệu suất tìm kiếm, tổng hợp tri thức và cá nhân hóa quá trình học tập."
+      "lua_chon": ["Tập trung vào việc mô phỏng trí tuệ con người và tự động hóa các quyết định cá nhân", "Hạn chế việc tìm kiếm thông tin bằng tay và duy trì các công việc tư duy lập đi lặp lại", "Tăng cường hiệu suất tìm kiếm, tổng hợp tri thức và cá nhân hóa quá trình học tập", "Giúp sinh viên tự động hoàn thành các hoạt động học tập và bài kiểm tra"],
+      "dap_an_dung": "Tăng cường hiệu suất tìm kiếm, tổng hợp tri thức và cá nhân hóa quá trình học tập"
     },
     {
       "cau_hoi": "Khi bạn cung cấp cho AI một vài ví dụ cụ thể về định dạng đầu ra mong muốn (ví dụ: Câu hỏi -> Trả lời mẫu) trong câu lệnh prompt, bạn đang sử dụng kỹ thuật nào?",
-      "lua_chon": ["Zero-shot Prompting", "Few-shot Prompting", "Implicit Prompting", "Negative Prompting"],
+      "lua_chon": ["Zero-shot Prompting", "Few-shot Prompting", "Random Prompting", "Implicit Prompting"],
       "dap_an_dung": "Few-shot Prompting"
     },
     {
-      "cau_hoi": "Sinh viên cần sử dụng Gemini để tóm tắt một bài báo khoa học dài về \"Tác động của Biến đổi Khí hậu\" cho bài thuyết trình nhóm. Để áp dụng yếu tố \"Context\" hiệu quả, sinh viên nên cung cấp thông tin nào sau đây?",
-      "lua_chon": ["Yêu cầu AI dịch bài viết sang một ngôn ngữ khác hiếm gặp.", "Cung cấp nội dung cốt lõi của bài báo gốc và chỉ rõ mục tiêu sử dụng nội dung.", "Yêu cầu AI phân tích phản biện đối với phương pháp nghiên cứu được sử dụng trong bài báo.", "Chỉ gửi duy nhất tiêu đề bài viết và không đưa thêm bất kỳ hướng dẫn nào."],
-      "dap_an_dung": "Cung cấp nội dung cốt lõi của bài báo gốc và chỉ rõ mục tiêu sử dụng nội dung."
+      "cau_hoi": "Sinh viên cần sử dụng Gemini để tóm tắt một bài báo khoa học dài về 'Tác động của Biến đổi Khí hậu' cho bài thuyết trình nhóm. Để áp dụng yếu tố 'Context' hiệu quả, sinh viên nên cung cấp thông tin nào sau đây?",
+      "lua_chon": ["Cung cấp nội dung cốt lõi của bài báo gốc và chỉ rõ mục tiêu sử dụng nội dung", "Yêu cầu AI đảm nhận một vai trò như chuyên gia khí hậu học nổi tiếng", "Chỉ định rằng đầu ra phải có định dạng bảng với các luận điểm không quá 50 từ", "Yêu cầu AI phân tích phản biện đối với phương pháp nghiên cứu được sử dụng"],
+      "dap_an_dung": "Cung cấp nội dung cốt lõi của bài báo gốc và chỉ rõ mục tiêu sử dụng nội dung"
     },
     {
-      "cau_hoi": "Nếu bạn cần tìm kiếm thông tin học thuật chính xác kèm theo trích dẫn nguồn gốc rõ ràng để phục vụ nghiên cứu, công cụ AI nào sau đây (được ví như \"cỗ máy trả lời\") là phù hợp nhất?",
-      "lua_chon": ["Midjourney", "Stable Diffusion", "Perplexity AI", "DALL-E"],
+      "cau_hoi": "Nếu bạn cần tìm kiếm thông tin học thuật chính xác kèm theo trích dẫn nguồn gốc rõ ràng để phục vụ nghiên cứu, công cụ AI nào sau đây (được ví như 'cỗ máy trả lời') là phù hợp nhất?",
+      "lua_chon": ["ChatGPT", "Midjourney", "DALL-E 3", "Perplexity AI"],
       "dap_an_dung": "Perplexity AI"
     },
+
+    // --- MODULE 4: GIAO TIẾP VÀ HỢP TÁC TRONG MÔI TRƯỜNG SỐ ---
     {
       "cau_hoi": "Khi gửi email trao đổi học tập với giảng viên, dòng tiêu đề (Subject) nào sau đây được coi là chuyên nghiệp và đúng quy cách nhất?",
-      "lua_chon": ["Thầy ơi giải thích hộ em bài này với.", "[VNU1001] - Xin tư vấn về Bài dự án cuối kì - Nguyễn Văn A - K68.", "Nộp bài tập điều kiện học phần công nghệ số.", "Không ghi tiêu đề (để trống) và viết thẳng vào phần nội dung email."],
-      "dap_an_dung": "[VNU1001] - Xin tư vấn về Bài dự án cuối kì - Nguyễn Văn A - K68."
+      "lua_chon": ["Xin tư vấn về Bài dự án cuối kỳ môn Nhập môn Công nghệ số và AI", "[Nguyễn Văn A] - Gửi thắc mắc và dự án cuối kì", "[VNU1001] - Xin tư vấn về Bài dự án cuối kì - Nguyễn Văn A - K68", "Thầy/Cô: em có thắc mắc về Bài dự án cuối kì"],
+      "dap_an_dung": "[VNU1001] - Xin tư vấn về Bài dự án cuối kì - Nguyễn Văn A - K68"
     },
     {
-      "cau_hoi": "Nhóm sinh viên cần soạn thảo một báo cáo, yêu cầu có khả năng chỉnh sửa đồng thời và tự động lưu trữ, chia sẻ qua nền tảng trực tuyến. Công cụ nào trong các tùy chọn sau là phù hợp nhất?",
-      "lua_chon": ["Microsoft Word offline (bản cũ 2010)", "Notepad trên Windows", "Google Docs", "Adobe Photoshop"],
+      "cau_hoi": "Nhóm sinh viên cần soạn thảo một báo cáo, yêu cầu có khả năng chỉnh sửa đồng thời và tự động lưu trữ, chia sẻ qua nền tảng trực tuyến. Công cụ nào sau đây là phù hợp nhất?",
+      "lua_chon": ["Microsoft Word offline", "Google Docs", "Notepad", "Adobe Acrobat Pro"],
       "dap_an_dung": "Google Docs"
     },
     {
       "cau_hoi": "Với mục tiêu xây dựng hồ sơ chuyên nghiệp và tìm kiếm cơ hội nghề nghiệp trong môi trường số, sinh viên nên tập trung phát triển sự hiện diện trên nền tảng nào sau đây?",
-      "lua_chon": ["TikTok", "LinkedIn", "Instagram", "Reddit"],
+      "lua_chon": ["TikTok", "Instagram", "LinkedIn", "Snapchat"],
       "dap_an_dung": "LinkedIn"
     },
     {
       "cau_hoi": "Ứng dụng AI tích hợp trong Microsoft Teams hoặc Zoom có thể hỗ trợ gì để nâng cao hiệu quả của một cuộc họp trực tuyến dài?",
-      "lua_chon": ["Tự động tắt camera của tất cả mọi người khi cuộc họp quá tẻ nhạt.", "Tự động tạo biên bản tóm tắt cuộc họp và liệt kê các nhiệm vụ cần làm.", "Tự động đuổi các thành viên không phát biểu ra khỏi phòng họp trực tuyến.", "Thay đổi giọng nói của người nói thành giọng người nổi tiếng."],
-      "dap_an_dung": "Tự động tạo biên bản tóm tắt cuộc họp và liệt kê các nhiệm vụ cần làm."
+      "lua_chon": ["Tự động tạo biên bản tóm tắt cuộc họp và liệt kê các nhiệm vụ cần làm", "Tự động điểm danh và tắt micro của người tham gia", "Thay đổi giọng nói của người phát biểu thành giọng robot", "Tự động trả lời các câu hỏi của người tham gia"],
+      "dap_an_dung": "Tự động tạo biên bản tóm tắt cuộc họp và liệt kê các nhiệm vụ cần làm"
     },
     {
       "cau_hoi": "Công cụ nào giúp tự động hóa việc tìm khung giờ trống và đặt lịch hẹn họp nhóm, giảm thiểu việc phải trao đổi qua lại nhiều lần?",
-      "lua_chon": ["Trello", "Calendly", "Slack", "Canva"],
+      "lua_chon": ["Calendly", "Microsoft Outlook", "Trello", "Google Sheets"],
       "dap_an_dung": "Calendly"
     },
     {
       "cau_hoi": "Trong một nhóm làm việc trực tuyến, nếu xảy ra xung đột quan điểm gay gắt giữa hai thành viên qua tin nhắn chat, hành động nào thể hiện tinh thần trách nhiệm và kỹ năng giải quyết vấn đề tốt nhất?",
-      "lua_chon": ["Im lặng rời khỏi nhóm chat để tránh liên lụy phiền phức.", "Đề nghị tổ chức cuộc gọi video ngắn để trao đổi trực tiếp và làm rõ vấn đề.", "Nhắn tin riêng kêu gọi các thành viên khác lập phe tẩy chay người sai.", "Liên tục thả biểu cảm phẫn nộ vào các tin nhắn xung đột trong nhóm chung."],
-      "dap_an_dung": "Đề nghị tổ chức cuộc gọi video ngắn để trao đổi trực tiếp và làm rõ vấn đề."
+      "lua_chon": ["Tập trung vào vấn đề chính và tiếp tục tranh luận công khai trên nhóm chat", "Báo cáo vấn đề với trưởng nhóm hoặc giảng viên để nhờ họ can thiệp", "Đề nghị tổ chức cuộc gọi video ngắn để trao đổi trực tiếp và làm rõ vấn đề", "Ngay lập tức ngừng trả lời tin nhắn và đợi đến cuộc họp nhóm đã lên lịch"],
+      "dap_an_dung": "Đề nghị tổ chức cuộc gọi video ngắn để trao đổi trực tiếp và làm rõ vấn đề"
     },
+
+    // --- MODULE 5: SÁNG TẠO NỘI DUNG SỐ ---
     {
-      "cau_hoi": "Sinh viên muốn sáng tạo một video ngắn hướng dẫn cách sử dụng công cụ ChatGPT cho các bạn cùng khóa. Theo quy trình 6 bước sáng tạo nội dung số, hành động nào sau đây thuộc về bước nền tảng đầu tiên?",
-      "lua_chon": ["Quay video màn hình và thu âm giọng nói hướng dẫn chi tiết.", "Xách định mục tiêu của video và đối tượng người xem để định hướng nội dung.", "Cắt ghép video, thêm hiệu ứng âm thanh và nhạc nền.", "Chia sẻ video lên các nhóm Zalo, Facebook của lớp và khóa học."],
-      "dap_an_dung": "Xác định mục tiêu của video và đối tượng người xem để định hướng nội dung."
+      "cau_hoi": "Sinh viên muốn sáng tạo một video ngắn hướng dẫn cách sử dụng công cụ ChatGPT cho các bạn cùng khóa. Theo quy trình 6 bước, hành động nào thuộc về bước nền tảng đầu tiên?",
+      "lua_chon": ["Lựa chọn phần mềm dựng video (ví dụ: CapCut) và bắt đầu quay màn hình", "Xác định mục tiêu của video và đối tượng người xem để định hướng nội dung", "Kiểm tra lỗi chính tả trong phụ đề của video và điều chỉnh lại", "Biên tập và tinh chỉnh trước khi tải video lên nền tảng lưu trữ"],
+      "dap_an_dung": "Xác định mục tiêu của video và đối tượng người xem để định hướng nội dung"
     },
     {
       "cau_hoi": "Trong giai đoạn lên ý tưởng cho nội dung để viết bài blog, cách sử dụng AI tạo sinh nào sau đây là hiệu quả và phù hợp nhất để hỗ trợ?",
-      "lua_chon": ["Yêu cầu AI thực hiện việc kiểm tra lỗi ngữ pháp và chỉnh sửa văn phong cho nội dung.", "Yêu cầu AI gợi ý các chủ đề và lập dàn ý chi tiết.", "Sao chép hoàn toàn một bài viết cũ trên mạng và yêu cầu AI đổi tên tác giả thành tên mình.", "Để AI tự viết toàn bộ nội dung mà không cần kiểm tra lại độ chính xác thực tế."],
-      "dap_an_dung": "Yêu cầu AI gợi ý các chủ đề và lập dàn ý chi tiết."
+      "lua_chon": ["Yêu cầu AI thực hiện việc xây dựng toàn bộ nội dung bài viết", "Yêu cầu AI thực hiện việc kiểm tra lỗi ngữ pháp và chỉnh sửa văn phong", "Yêu cầu AI gợi ý các chủ đề và lập dàn ý chi tiết", "Không nên sử dụng AI vì sẽ làm mất tính sáng tạo"],
+      "dap_an_dung": "Yêu cầu AI gợi ý các chủ đề và lập dàn ý chi tiết"
     },
     {
-      "cau_hoi": "Công cụ thiết kế trực tuyến nào tích hợp sẵn AI, cho phép người dùng không chuyên tạo các ấn phẩm đồ họa (như poster, infographic) một cách dễ dàng thông qua các mẫu kéo thả?",
-      "lua_chon": ["Adobe Illustrator", "Canva", "CorelDraw", "Blender"],
+      "cau_hoi": "Công cụ thiết kế trực tuyến nào tích hợp sẵn AI, cho phép người dùng không chuyên tạo các ấn phẩm đồ họa (như poster, infographic) một cách dễ dàng?",
+      "lua_chon": ["Adobe Photoshop", "Canva", "Adobe Illustrator", "Figma"],
       "dap_an_dung": "Canva"
     },
     {
-      "cau_hoi": "Công cụ nào sau đây là phù hợp nhất để giúp tạo nhanh một bài thuyết trình (slideshow) với thiết kế hiện đại từ một dàn ý hoặc văn bản có sẵn chỉ bằng vài câu lệnh?",
-      "lua_chon": ["Gamma.app", "Microsoft Excel", "Google Sheets", "Paint trên Windows"],
+      "cau_hoi": "Công cụ nào sau đây là phù hợp nhất để giúp tạo nhanh một bài thuyết trình với thiết kế hiện đại từ một dàn ý hoặc văn bản có sẵn?",
+      "lua_chon": ["Gamma.app", "Microsoft PowerPoint", "Adobe InDesign", "Google Docs"],
       "dap_an_dung": "Gamma.app"
     },
     {
-      "cau_hoi": "Để tạo ra một hình ảnh minh họa độc đáo bằng công cụ AI (ví dụ: Midjourney, DALL-E), yêu cầu nào là quan trọng nhất trong câu lệnh (prompt)?",
-      "lua_chon": ["Chỉ cần viết một từ khóa chung chung như 'đẹp', 'ấn tượng'.", "Mô tả chi tiết về đối tượng, bối cảnh, phong cách nghệ thuật và màu sắc.", "Viết câu lệnh càng dài dòng bằng nhiều ngôn ngữ trộn lẫn càng tốt.", "Bắt buộc phải chèn các đoạn mã lập trình Python phức tạp vào câu lệnh."],
-      "dap_an_dung": "Mô tả chi tiết về đối tượng, bối cảnh, phong cách nghệ thuật và màu sắc."
+      "cau_hoi": "Để tạo ra một hình ảnh minh họa độc đáo bằng công cụ AI, yêu cầu nào là quan trọng nhất trong câu lệnh (prompt)?",
+      "lua_chon": ["Yêu cầu AI đóng vai một nghệ sĩ chuyên nghiệp để định hình phong cách", "Mô tả chi tiết về đối tượng, bối cảnh, phong cách nghệ thuật và màu sắc", "Chỉ cần sử dụng các từ khóa về cảm xúc mà không mô tả đối tượng", "Viết càng ngắn gọn càng tốt để AI có thể tự do sáng tạo"],
+      "dap_an_dung": "Mô tả chi tiết về đối tượng, bối cảnh, phong cách nghệ thuật và màu sắc"
     },
     {
-      "cau_hoi": "Khi sử dụng một hình ảnh từ Internet có giấy phép Creative Commons \"CC BY-NC\" (Ghi công - Phi thương mại), hành động nào sau đây là vi phạm bản quyền?",
-      "lua_chon": ["Sử dụng hình ảnh làm slide thuyết trình bài tập trên lớp và có ghi nguồn tên tác giả.", "In hình ảnh lên áo phông để bán gây quỹ làm từ thiện.", "Chia sẻ lại hình ảnh trên trang blog cá nhân phi lợi nhuận kèm ghi nhận tác giả.", "Dùng hình ảnh minh họa cho bài tiểu luận học tập không mang tính thương mại."],
-      "dap_an_dung": "In hình ảnh lên áo phông để bán gây quỹ làm từ thiện."
+      "cau_hoi": "Khi sử dụng một hình ảnh từ Internet có giấy phép Creative Commons 'CC BY-NC' (Ghi công - Phi thương mại), hành động nào sau đây là vi phạm bản quyền?",
+      "lua_chon": ["Sử dụng hình ảnh trong bài thuyết trình lớp học và ghi rõ tên tác giả", "In hình ảnh lên áo phông để bán gây quỹ làm từ thiện", "Chia sẻ hình ảnh trên blog cá nhân phi lợi nhuận và ghi nguồn", "Lưu hình ảnh về máy tính để làm hình nền cá nhân"],
+      "dap_an_dung": "In hình ảnh lên áo phông để bán gây quỹ làm từ thiện"
     },
     {
-      "cau_hoi": "Tại sao bước \"Đánh giá và tinh chỉnh\" nội dung do AI tạo ra lại cực kỳ quan trọng trước khi sử dụng hoặc xuất bản sản phẩm?",
-      "lua_chon": ["Vì AI luôn tạo ra nội dung hoàn hảo không cần sửa đổi nhưng cần xem cho biết.", "Vì AI có thể tạo ra thông tin sai lệch, tái tạo thiên kiến hoặc thiếu dấu ấn cá nhân.", "Để phần mềm AI tự động tính phí bản quyền dựa trên số lần người dùng đọc lại.", "Nhằm mục đích xóa bỏ hoàn toàn lịch sử trò chuyện với công cụ AI trên hệ thống."],
-      "dap_an_dung": "Vì AI có thể tạo ra thông tin sai lệch, tái tạo thiên kiến hoặc thiếu dấu ấn cá nhân."
+      "cau_hoi": "Tại sao bước 'Đánh giá và tinh chỉnh' nội dung do AI tạo ra lại cực kỳ quan trọng trước khi sử dụng hoặc xuất bản?",
+      "lua_chon": ["Để đảm bảo AI đã sử dụng đúng các thuật ngữ chuyên môn", "Vì các công cụ AI yêu cầu người dùng phải chỉnh sửa mới cho phép tải về", "Vì AI chỉ hỗ trợ các tác vụ giải trí, không thể xử lý tài liệu học thuật", "Vì AI có thể tạo ra thông tin sai lệch, tái tạo thiên kiến hoặc thiếu dấu ấn cá nhân"],
+      "dap_an_dung": "Vì AI có thể tạo ra thông tin sai lệch, tái tạo thiên kiến hoặc thiếu dấu ấn cá nhân"
     },
+
+    // --- MODULE 6: AN TOÀN VÀ LIÊM CHÍNH HỌC THUẬT ---
     {
-      "cau_hoi": "Thuật ngữ nào dùng để chỉ hình thức lừa đảo trực tuyến trong đó kẻ tấn công giả mạo một đơn vị uy tín (như ngân hàng, trường học) qua email hoặc tin nhắn giả mạo để đánh cắp thông tin cá nhân?",
-      "lua_chon": ["Phishing", "DDoS", "Malware", "Spyware"],
+      "cau_hoi": "Thuật ngữ nào dùng để chỉ hình thức lừa đảo trực tuyến trong đó kẻ tấn công giả mạo một đơn vị uy tín (như ngân hàng, trường học) qua email để đánh cắp thông tin cá nhân?",
+      "lua_chon": ["Phishing", "Hacking", "Ransomware", "DDOS"],
       "dap_an_dung": "Phishing"
     },
     {
-      "cau_hoi": "Biện pháp nào sau đây được coi là lớp bảo vệ quan trọng nhất để ngăn chặn truy cập trái phép vào tài khoản trực tuyến của sinh viên, ngay cả khi mật khẩu đăng nhập bị lộ?",
-      "lua_chon": ["Thay đổi hình nền đại diện tài khoản thường xuyên.", "Sử dụng xác thực hai yếu tố (2FA).", "Đặt mật khẩu cực dài chỉ gồm một ký tự lặp lại.", "Ẩn địa chỉ email cá nhân khỏi danh bạ công khai."],
-      "dap_an_dung": "Sử dụng xác thực hai yếu tố (2FA)."
+      "cau_hoi": "Biện pháp nào sau đây được coi là lớp bảo vệ quan trọng nhất để ngăn chặn truy cập trái phép vào tài khoản trực tuyến, ngay cả khi mật khẩu bị lộ?",
+      "lua_chon": ["Cài đặt và cập nhật thường xuyên phần mềm diệt virus", "Sử dụng xác thực hai yếu tố", "Sử dụng trình duyệt ẩn danh", "Xóa lịch sử duyệt web hàng ngày"],
+      "dap_an_dung": "Sử dụng xác thực hai yếu tố"
     },
     {
-      "cau_hoi": "Hành động nào sau đây bị coi là vi phạm liêm chính học thuật nghiêm trọng (đạo văn) trong môi trường đại học?",
-      "lua_chon": ["Tóm tắt ý tưởng của tác giả khác bằng lời văn của mình và có trích dẫn nguồn đầy đủ.", "Sao chép một đoạn văn từ Internet vào bài làm của mình mà không ghi nhận nguồn.", "Tự xây dựng số liệu nghiên cứu dựa trên kết quả khảo sát thực tế do mình thực hiện.", "Thảo luận đề tài bài tập nhóm cùng các thành viên khác theo phân công của lớp."],
-      "dap_an_dung": "Sao chép một đoạn văn từ Internet vào bài làm của mình mà không ghi nhận nguồn."
+      "cau_hoi": "Hành động nào sau đây bị coi là vi phạm liêm chính học thuật (đạo văn)?",
+      "lua_chon": ["Diễn giải ý tưởng của người khác bằng ngôn ngữ của mình và có trích dẫn nguồn", "Sao chép một đoạn văn từ tài liệu tham khảo, đặt trong ngoặc kép và ghi rõ nguồn", "Sao chép một đoạn văn từ Internet vào bài làm của mình mà không ghi nhận nguồn", "Viết bài dựa trên kiến thức và trải nghiệm của bản thân"],
+      "dap_an_dung": "Sao chép một đoạn văn từ Internet vào bài làm của mình mà không ghi nhận nguồn"
     },
     {
-      "cau_hoi": "Theo chuẩn trích dẫn Harvard được hướng dẫn trong bài giảng, khi trích dẫn một ý tưởng trong bài viết (in-text citation), thông tin nào bắt buộc cần được ghi lại ngay sau câu trích dẫn?",
-      "lua_chon": ["(Tên bài báo, Đường link liên kết)", "(Họ tác giả, Năm xuất bản)", "(Tên tác giả, Tiêu đề sách, Số trang)", "(Nơi xuất bản, Nhà xuất bản)"],
+      "cau_hoi": "Theo chuẩn trích dẫn Harvard được hướng dẫn trong bài giảng, khi trích dẫn một ý tưởng trong bài viết (in-text citation), thông tin nào cần được ghi lại ngay sau câu trích dẫn?",
+      "lua_chon": ["(Họ tác giả, Năm xuất bản)", "(Tên bài báo, Số trang)", "(Tiêu đề tác phẩm, URL)", "(Tên nhà xuất bản, Năm công bố)"],
       "dap_an_dung": "(Họ tác giả, Năm xuất bản)"
     },
     {
-      "cau_hoi": "Khái niệm An sinh số (Digital Well-being) khuyến khích sinh viên thực hiện hành động nào sau đây để bảo vệ sức khỏe thể chất và tinh thần?",
-      "lua_chon": ["Sử dụng các công cụ để thiết lập giới hạn và duy trì sự cân bằng giữa thế giới số và thế giới thực.", "Liên tục trực tuyến 24/7 trên mạng xã hội để không bỏ lỡ bất kỳ tin tức nào.", "Thay thế hoàn toàn việc gặp gỡ trao đổi trực tiếp bằng nhắn tin trực tuyến qua ứng dụng.", "Tắt toàn bộ thiết bị công nghệ và không bao giờ sử dụng lại máy tính hay điện thoại."],
-      "dap_an_dung": "Sử dụng các công cụ để thiết lập giới hạn và duy trì sự cân bằng giữa thế giới số và thế giới thực."
+      "cau_hoi": "Khái niệm An sinh số (Digital Well-being) khuyến khích sinh viên thực hiện hành động nào sau đây?",
+      "lua_chon": ["Luôn bật thông báo và dành thời gian tối đa trực tuyến để tránh FOMO", "Sử dụng các công cụ để thiết lập giới hạn và duy trì sự cân bằng giữa thế giới số và thế giới thực", "Tăng cường sử dụng ánh sáng xanh từ màn hình để cải thiện khả năng tập trung", "Thay thế giao tiếp trực tiếp bằng giao tiếp qua mạng xã hội"],
+      "dap_an_dung": "Sử dụng các công cụ để thiết lập giới hạn và duy trì sự cân bằng giữa thế giới số và thế giới thực"
     },
     {
-      "cau_hoi": "Khi sử dụng nội dung do ChatGPT tạo ra để hỗ trợ làm bài tập lớn, hành động nào sau đây là phù hợp với nguyên tắc đạo đức và liêm chính học thuật?",
-      "lua_chon": ["Sao chép nguyên văn câu trả lời của AI và nộp bài mà không chỉnh sửa hay ghi chú.", "Sử dụng AI để lên ý tưởng, sau đó tự viết, kiểm chứng thông tin, và ghi nhận sự hỗ trợ của AI trong bài làm.", "Chỉ thay đổi một vài từ ngữ trong văn bản do AI tạo ra để phần mềm kiểm tra đạo văn không phát hiện.", "Dùng nội dung AI tạo ra để nộp và khẳng định 100% tự mình làm hoàn toàn không dùng công cụ."],
-      "dap_an_dung": "Sử dụng AI để lên ý tưởng, sau đó tự viết, kiểm chứng thông tin, và ghi nhận sự hỗ trợ của AI trong bài làm."
+      "cau_hoi": "Khi sử dụng nội dung do ChatGPT tạo ra để hỗ trợ làm bài tập, hành động nào sau đây là phù hợp với nguyên tắc đạo đức và liêm chính học thuật?",
+      "lua_chon": ["Dán nội dung do AI tạo ra vào bài làm, chỉ chỉnh sửa văn phong và không kiểm chứng", "Sử dụng AI để dịch thuật hoặc tóm tắt tài liệu, không cần ghi chú vì đó là công cụ", "Chỉnh sửa một vài từ trong câu trả lời của ChatGPT và không ghi chú gì thêm", "Sử dụng AI để lên ý tưởng, sau đó tự viết, kiểm chứng thông tin, và ghi nhận sự hỗ trợ của AI trong bài làm"],
+      "dap_an_dung": "Sử dụng AI để lên ý tưởng, sau đó tự viết, kiểm chứng thông tin, và ghi nhận sự hỗ trợ của AI trong bài làm"
     },
     {
       "cau_hoi": "Theo nguyên tắc Liêm chính học thuật, hành vi viết lại ý tưởng của người khác bằng lời văn của mình nhưng KHÔNG trích dẫn nguồn được xem là hình thức vi phạm nào?",
-      "lua_chon": ["Bịa đặt số liệu nghiên cứu một cách cố ý.", "Đạo văn (Plagiarism), do chiếm đoạt ý tưởng thuộc về sở hữu trí tuệ của người khác.", "Hợp tác không hợp lệ trong làm bài tập nhóm.", "Nộp một bài làm cho hai môn học khác nhau (Tự đạo văn)."],
-      "dap_an_dung": "Đạo văn (Plagiarism), do chiếm đoạt ý tưởng thuộc về sở hữu trí tuệ của người khác."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 1): Một máy tính cấu hình văn phòng chạy hệ điều hành Windows 11 có thông số RAM là 4 GB. Khi sinh viên mở đồng thời trình duyệt Microsoft Edge với 15 tab học tập và phần mềm Zoom để học trực tuyến, hiện tượng nghẽn cổ chai (bottleneck) hệ thống xảy ra chủ yếu do thành phần phần cứng nào?",
-      "lua_chon": ["Ổ cứng thể rắn (SSD)", "Bộ nhớ truy cập ngẫu nhiên (RAM)", "Card đồ họa tích hợp", "Bộ xử lý trung tâm (CPU)"],
-      "dap_an_dung": "Bộ nhớ truy cập ngẫu nhiên (RAM)"
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 1): Trong mạng máy tính, giao thức bảo mật mạng không dây nào sau đây được khuyến nghị sử dụng hiện nay cho các bộ định tuyến (router) gia đình để ngăn chặn hiệu quả nhất hành vi bẻ khóa (crack) mật khẩu Wi-Fi từ bên ngoài?",
-      "lua_chon": ["WEP", "WPA", "WPA2", "WPA3"],
-      "dap_an_dung": "WPA3"
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 2): Khi đánh giá chất lượng và độ tin cậy của một bài báo khoa học vừa tìm được trên mạng, tiêu chí \"Relevance\" (Sự liên quan) trong mô hình CRAAP yêu cầu sinh viên phải thực hiện hành động nào?",
-      "lua_chon": ["Kiểm tra xem thông tin có được cập nhật hoặc sửa đổi trong vòng 3 năm trở lại đây hay không.", "Đối chiếu nội dung bài viết xem có phù hợp với nhu cầu nghiên cứu và giải quyết được câu hỏi đề tài của mình hay không.", "Xác định rõ thông tin về danh tính, học hàm học vị và uy tín chuyên môn của tác giả bài viết.", "Đánh giá tính trung thực, khách quan và xem bài viết có thiên vị hay chứa mục đích thương mại tiềm ẩn không."],
-      "dap_an_dung": "Đối chiếu nội dung bài viết xem có phù hợp với nhu cầu nghiên cứu và giải quyết được câu hỏi đề tài của mình hay không."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 3): Thuật ngữ \"Machine Learning\" (Học máy) có mối quan hệ kiến trúc phân cấp như thế nào đối với thuật ngữ \"Artificial Intelligence\" (Trí tuệ nhân tạo) và \"Deep Learning\" (Học sâu)?",
-      "lua_chon": ["Machine Learning bao hàm toàn bộ Artificial Intelligence và Deep Learning.", "Machine Learning là một nhánh con của Artificial Intelligence, và Deep Learning là một nhánh con của Machine Learning.", "Deep Learning là nhánh cha chứa Machine Learning, và Machine Learning chứa Artificial Intelligence.", "Ba khái niệm này hoàn toàn độc lập, nằm ở các tầng phân cấp công nghệ khác nhau."],
-      "dap_an_dung": "Machine Learning là một nhánh con của Artificial Intelligence, và Deep Learning là một nhánh con của Machine Learning."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 3): Kỹ thuật viết prompt cấu trúc dạng CRAC bao gồm 4 yếu tố cốt lõi nào giúp sinh viên tối ưu hóa câu lệnh khi tương tác với các công cụ như ChatGPT hay Gemini?",
-      "lua_chon": ["Creativity (Sáng tạo), Reason (Lý do), Action (Hành động), Clarity (Rõ ràng).", "Context (Bối cảnh), Role (Vai trò), Action (Hành động), Constraints (Ràng buộc).", "Command (Lệnh), Result (Kết quả), Accuracy (Chính xác), Conclusion (Kết luận).", "Content (Nội dung), Review (Đánh giá), AI-assistance (Trợ lý AI), Correction (Sửa lỗi)."],
-      "dap_an_dung": "Context (Bối cảnh), Role (Vai trò), Action (Hành động), Constraints (Ràng buộc)."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 4): Theo quy tắc ứng xử văn minh trong môi trường số (Netiquette), khi bạn được thêm vào một nhóm chat (Zalo/Teams) phục vụ cho việc làm bài tập dự án môn học, hành động nào sau đây là chuẩn mực nhất?",
-      "lua_chon": ["Ngay lập tức đăng tải các quy định cá nhân và yêu cầu các thành viên khác phải tuân thủ theo thời gian biểu của mình.", "Gửi một lời chào ngắn gọn, xác nhận sự hiện diện và bày tỏ tinh thần sẵn sàng hợp tác cùng nhóm.", "Không nói gì cả (im lặng hoàn toàn) cho đến khi có người chỉ định cụ thể tên mình mới trả lời.", "Spam liên tục các hình ảnh hài hước, sticker không liên quan để làm giảm bớt không khí căng thẳng của nhóm."],
-      "dap_an_dung": "Gửi một lời chào ngắn gọn, xác nhận sự hiện diện và bày tỏ tinh thần sẵn sàng hợp tác cùng nhóm."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 5): Sinh viên A sử dụng công cụ AI tạo ảnh để thiết kế một bức áp phích quảng bá sự kiện văn hóa của trường. Sau khi AI xuất ra bức ảnh đầu tiên rất đẹp nhưng phong cách màu sắc chưa phù hợp với tính chất trang nghiêm của sự kiện, sinh viên A nên thực hiện bước nào tiếp theo theo quy trình sáng tạo nội dung số?",
-      "lua_chon": ["Chấp nhận sử dụng luôn bức ảnh lỗi vì chỉnh sửa lại prompt sẽ rất mất thời gian.", "Đánh giá các điểm chưa phù hợp, tinh chỉnh lại câu lệnh prompt về tông màu và yêu cầu AI tái tạo (regenerate) hoặc sửa đổi.", "Xóa bỏ hoàn toàn dự án áp phích và chuyển sang tự vẽ tay thủ công truyền thống.", "Đăng bức ảnh lỗi lên mạng xã hội để nhờ cộng đồng mạng chỉnh sửa giúp tông màu."],
-      "dap_an_dung": "Đánh giá các điểm chưa phù hợp, tinh chỉnh lại câu lệnh prompt về tông màu và yêu cầu AI tái tạo (regenerate) hoặc sửa đổi."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 5): Loại giấy phép Creative Commons nào sau đây cho phép người khác tự do chia sẻ, chỉnh sửa tác phẩm của bạn, kể cả cho mục đích thương mại, với điều kiện duy nhất là phải ghi công (nhắc tên) bạn là tác giả gốc?",
-      "lua_chon": ["CC BY-NC", "CC BY-SA", "CC BY", "CC BY-ND"],
-      "dap_an_dung": "CC BY"
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 6): Sinh viên B nhận được một email từ địa chỉ có đuôi \"@vnu-support-portal.online\" thông báo tài khoản email sinh viên của B sẽ bị khóa trong 24 giờ tới trừ khi B bấm vào liên kết đính kèm để cập nhật mật khẩu. Nhận diện nguy cơ an toàn thông tin, hành động đúng đắn nhất của B là gì?",
-      "lua_chon": ["Nhanh chóng bấm vào liên kết và nhập mật khẩu hiện tại để không bị khóa tài khoản.", "Không bấm vào liên kết, đánh dấu email là lừa đảo (Phishing) và báo cáo với trung tâm công nghệ thông tin của nhà trường qua kênh chính thống.", "Chuyển tiếp (forward) email này cho tất cả các bạn trong lớp để cảnh báo họ cùng làm theo hướng dẫn.", "Trả lời trực tiếp email đó bằng những lời lẽ thách thức kẻ lừa đảo."],
-      "dap_an_dung": "Không bấm vào liên kết, đánh dấu email là lừa đảo (Phishing) và báo cáo với trung tâm công nghệ thông tin của nhà trường qua kênh chính thống."
-    },
-    {
-      "cau_hoi": "MỘT CÂU HỎI MỚI (MODULE 6): Hành vi một sinh viên tự ý nộp lại một bài nghiên cứu khoa học mà mình đã hoàn thành và chấm điểm ở học kỳ trước để làm bài tập điều kiện cho một học phần mới ở học kỳ này mà không có sự đồng ý của giảng viên được gọi là hình thức vi phạm nào?",
-      "lua_chon": ["Gian lận thi cử thông thường (Exam Fraud)", "Đạo văn từ người khác (Plagiarism)", "Bịa đặt số liệu (Fabrication)", "Tự đạo văn (Self-plagiarism)"],
-      "dap_an_dung": "Tự đạo văn (Self-plagiarism)"
+      "lua_chon": ["Bịa đặt (Fabrication), vì sinh viên đã tự tạo ra dữ liệu không có thật", "Đạo văn (Plagiarism), do chiếm đoạt ý tưởng thuộc về sở hữu trí tuệ", "Gian lận (Fraud), vì sinh viên đã sử dụng các thủ đoạn gian lận", "Sử dụng hợp lý (Fair Use), do đó không cần bận tâm đến việc trích dẫn"],
+      "dap_an_dung": "Đạo văn (Plagiarism), do chiếm đoạt ý tưởng thuộc về sở hữu trí tuệ"
     }
-    
+];
+
 let currentIndex = 0;
 let score = 0;
 let currentQuestions = [];
@@ -315,7 +280,6 @@ function shuffle(array) {
 function startQuiz() {
     currentIndex = 0;
     score = 0;
-    // Trộn toàn bộ 50 câu hỏi
     currentQuestions = shuffle([...quizData]); 
     document.getElementById('quiz-box').style.display = 'block';
     document.getElementById('result-box').style.display = 'none';
@@ -329,7 +293,6 @@ function showQuestion() {
     document.getElementById('question-text').innerText = q.cau_hoi;
     
     let optionsHtml = '';
-    // Trộn ngẫu nhiên thứ tự các đáp án A B C D để không bị nhớ vẹt vị trí
     let shuffledOptions = shuffle([...q.lua_chon]); 
     
     shuffledOptions.forEach(opt => {
@@ -348,7 +311,7 @@ function checkAnswer(btn, selectedOpt) {
     buttons.forEach(b => {
         b.disabled = true;
         if(b.innerText === q.dap_an_dung) {
-            b.style.background = "#c3e6cb"; // Đổi màu đáp án đúng thành xanh lục
+            b.style.background = "#c3e6cb"; 
             b.style.borderColor = "#71dd8a";
         }
     });
@@ -360,7 +323,7 @@ function checkAnswer(btn, selectedOpt) {
         score++;
         document.getElementById('score-text').innerText = `Đúng: ${score}`;
     } else {
-        btn.style.background = "#f5c6cb"; // Đổi màu đáp án bạn chọn sai thành đỏ
+        btn.style.background = "#f5c6cb"; 
         btn.style.borderColor = "#f1b0b7";
         feedback.className = "feedback incorrect";
         feedback.innerText = `❌ Sai rồi! Đáp án chính xác là: ${q.dap_an_dung}`;
@@ -384,7 +347,6 @@ function restartQuiz() {
     startQuiz();
 }
 
-// Khởi chạy ứng dụng lần đầu tiên
 startQuiz();
 </script>
 </body>
